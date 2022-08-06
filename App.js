@@ -1,37 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Button,Image} from 'react-native';
+import React from 'react';
+import { Text } from 'react-native';
+import { View ,Image} from 'react-native-web';
 
+const test =()=>{
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.hello}>
-        Hello
-      </Text>
-         <Image
-         style={styles.img}
-         source={require('./assets/favicon.png')}
-         />
-  </View>
+  return(
+    <View>
+    <Image
+      source={require('./favicon.png')}
+  
+  style={{width: 200, height: 200,alignCenter:'center',alignSelf:'center',alignItems:'center',}}
+      />
+<Text style={{alignText:'center',
+alignSelf:'center',
+alignCenter:'center',
+alignItems:'center',
+marginRight:20,
+}}>Hello</Text>
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    backgroundColor: '#22152C',
-   
-  },
- hello:{
-color: '#F0EAEA',
-fontSize:32,
-width: 77,
-height: 39,
-left: 139,
-top: 262,
- },
- img:{
-  width:150,
-  height:150,
- },
-});
+
+
+
+export default test;
