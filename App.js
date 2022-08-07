@@ -1,27 +1,36 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { View ,Image} from 'react-native-web';
+import { Text, View, TextInput, ImageBackground,
+	StyleSheet, Dimensions } from 'react-native';
 
-const test =()=>{
+const screenHeight = Dimensions.get('window').height;
+const screenWidth = Dimensions.get('window').width;
 
-  return(
-    <View>
-    <Image
-      source={require('./favicon.png')}
+const BackgroundImg = () => {
+return (
+	<View>
+    
+		<ImageBackground
+    source={{uri :'https://raw.githubusercontent.com/Luqmaan2/App/main/test.png'}}
+    style={{
+      height:screenHeight,
+      width:screenWidth,
+      flex:1,
+    }}
+    >
+      </ImageBackground>
+      <Text style={styles.text}>Hello</Text>
+      </View>
+	
+);
+};
+
+export default BackgroundImg;
+
+const styles = StyleSheet.create({
+text: {
+	textAlign:'center',
+  marginTop:50,
   
-  style={{width: 200, height: 200,alignCenter:'center',alignSelf:'center',alignItems:'center',}}
-      />
-<Text style={{alignText:'center',
-alignSelf:'center',
-alignCenter:'center',
-alignItems:'center',
-marginRight:20,
-}}>Hello</Text>
-    </View>
-  );
-}
+},
 
-
-
-
-export default test;
+});
